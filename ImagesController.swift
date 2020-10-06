@@ -1,7 +1,7 @@
 import UIKit
 
 class ImagesController: UITableViewController {
-
+    
     var list: [String] = [String]()
     let Url = URL(string: "https://placehold.it/375x150?text=")!
     
@@ -18,11 +18,11 @@ class ImagesController: UITableViewController {
         }
         self.tableView.reloadData()
     }
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
@@ -32,7 +32,9 @@ class ImagesController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ImagesCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ImagesCell else {
+            return ImagesCell
+        }
         cell.configure(url: list[indexPath.row])
         return cell
     }
