@@ -3,7 +3,7 @@
 //  ImageToTable
 //
 //  Created by Владислав on 02.10.2020.
-//
+///
 
 import Foundation
 import UIKit
