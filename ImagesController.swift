@@ -3,16 +3,11 @@ import UIKit
 class ImagesController: UITableViewController {
 
     var list: [String] = [String]()
-    let newUrl = URL(string: "https://placehold.it/375x150?text=")!
-    
-    func myURL(imageIndex index: Int) -> String {
-        let url = "https://placehold.it/375x150?text=\(String(describing: index))"
-        return url
-    }
+    let Url = URL(string: "https://placehold.it/375x150?text=")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        downloadImage(withURL: newUrl, forCell: ImagesCell())
+        downloadImage(withURL: Url, forCell: ImagesCell())
     }
     
     func downloadImage(withURL url: URL, forCell cell: UITableViewCell) {
