@@ -1,14 +1,14 @@
 //
-//  ImageToTableTests.swift
-//  ImageToTableTests
+//  TheFirstAppTests.swift
+//  TheFirstAppTests
 //
-//  Created by Владислав on 02.10.2020.
+//  Created by Владислав on 08.10.2020.
 //
 
 import XCTest
-@testable import ImageToTable
+@testable import TheFirstApp
 
-class ImageToTableTests: XCTestCase {
+class TheFirstAppTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
